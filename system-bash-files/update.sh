@@ -1,4 +1,4 @@
-cd Desktop
+cd ~/Desktop
 
 wget https://github.com/jahidrdpschool/pc/raw/refs/heads/main/system-bash-files/Shell.sh
 wget https://github.com/jahidrdpschool/pc/raw/refs/heads/main/system-bash-files/Drive.sh
