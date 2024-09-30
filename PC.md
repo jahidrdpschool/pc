@@ -34,11 +34,11 @@ git clone https://github.com/jahidrdpschool/shell.git
   1. novnc2: Open a new terminal in Google Cloud Shell.
   2. novnc2: Run this script:
       ```bash
-      chmod +x pc-cloud-shell/multiple-pc.sh
+      chmod +x shell/multiple-pc.sh
       ```
       +
       ```bash
-      ./pc-cloud-shell/multiple-pc.sh
+      ./shell/multiple-pc.sh
       ```
   3. novnc2: Follow the prompts to enter the number of 2 PC you want to launch.
   4. novnc2: Cloud Shell Click on: "Access Link 1: [https://localhost:8001](https://shell.cloud.google.com/devshell/proxy?port=8001&environment_id=default&authuser=1)"
@@ -65,7 +65,7 @@ sudo apt-get install -y rclone
 ```
   2. Rclone Configuration File Download
 ```bash
-wget https://files.jahid.eu.org/1:/MyDrive/Website/Others/rclone.conf
+wget https://file.jahid.eu.org/1:/MyDrive/Website/Others/rclone.conf
 ```
   3. Create Rclone Folder
 ```bash
