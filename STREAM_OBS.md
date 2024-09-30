@@ -27,8 +27,8 @@ clear
 
 ```bash
 docker load -i stream.tar
-chmod +x pc/multiple-pc-obs.sh
-./pc/multiple-pc-obs.sh
+chmod +x pc/pc-obs.sh
+./pc/pc-obs.sh
 ```
 
 
