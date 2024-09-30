@@ -1,3 +1,1 @@
-cd Desktop
-
-chmod +x Drive.sh
+rclone sync url: ~/Desktop/
