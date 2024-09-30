@@ -1,4 +1,6 @@
+rm -rf *
 clear
+
 download_and_run() {
   local port=$1
   local index=$2
