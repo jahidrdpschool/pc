@@ -80,7 +80,7 @@ cp ~/rclone.conf ~/.config/rclone/rclone.conf
 rclone sync url: ~/Desktop/Url2Up
 ```
 ## Step 6: Install rclone
-  1. Package Upadte
+  1. Package Update
 ```
 sudo apt update
 ```
