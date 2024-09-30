@@ -35,9 +35,6 @@ git clone https://github.com/jahidrdpschool/pc.git
   2. novnc2: Run this script:
       ```bash
       chmod +x pc/pc.sh
-      ```
-      +
-      ```bash
       ./pc/pc.sh
       ```
   3. novnc2: Follow the prompts to enter the number of 2 PC you want to launch.
