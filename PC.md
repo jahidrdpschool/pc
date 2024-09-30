@@ -5,7 +5,7 @@
   1. Open Google Cloud [Shell](https://shell.cloud.google.com/?hl=en_US&fromcloudshell=true&show=terminal&authuser=1).
   2. Run this command:
 ```bash
-git clone https://github.com/jahidrdpschool/pc-cloud-shell.git
+git clone https://github.com/jahidrdpschool/shell.git
 ```
 
   ## Step 1: Launch the first novnc2
