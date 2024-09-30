@@ -4,5 +4,4 @@ apt install -y unzip
 
 apt install -y zip
 
-sudo -v ; curl https://rclone.org/install.sh | sudo bash
-
+curl https://rclone.org/install.sh | sudo bash
