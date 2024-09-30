@@ -71,7 +71,7 @@ git clone https://github.com/jahidrdpschool/pc.git
 
 
 
-Keep Alive Link: [https://shell.cloud.google.com/devshell/proxy?port=8080&environment_id=default&authuser=1](https://shell.cloud.google.com/devshell/proxy?port=8080&environment_id=default&authuser=1)
+Keep Alive Link: [https://shell.cloud.google.com/devshell/proxy?port=8002&environment_id=default&authuser=1](https://shell.cloud.google.com/devshell/proxy?port=8002&environment_id=default&authuser=1)
 
   ## Step 5: Install OBS Studio
   1. Go to LXTerminal and CMD:
