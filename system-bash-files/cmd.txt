@@ -9,3 +9,8 @@ curl https://rclone.org/install.sh | sudo bash
 wget https://your-rclone-link/rclone.conf
 
 mv ~/rclone.conf ~/.config/rclone/rclone.conf
+
+cd Desktop
+
+chmod +x Drive.sh
+
