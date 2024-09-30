@@ -1,0 +1,1 @@
+firefox "https://accounts.google.com/ServiceLogin?service=accountsettings&continue=https://myaccount.google.com" && firefox "https://shell.cloud.google.com/devshell/proxy?port=8002&environment_id=default" "https://shell.cloud.google.com/?hl=en_US&fromcloudshell=true&show=terminal"
