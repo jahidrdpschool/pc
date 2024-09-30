@@ -5,7 +5,7 @@ Goto [Google Cloud Shell](https://shell.cloud.google.com/cloudshell/open?page=ed
 ## Github Repo Download (1st Time Only):
 
 ```bash
-git clone https://github.com/jahidrdpschool/shell.git
+git clone https://github.com/jahidrdpschool/pc.git
 ```
 
 ## Download System File (1st Time Only):
@@ -27,8 +27,8 @@ clear
 
 ```bash
 docker load -i stream.tar
-chmod +x shell/multiple-pc-obs.sh
-./shell/multiple-pc-obs.sh
+chmod +x pc/multiple-pc-obs.sh
+./pc/multiple-pc-obs.sh
 ```
 
 
