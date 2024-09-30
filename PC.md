@@ -5,7 +5,7 @@
   1. Open Google Cloud [Shell](https://shell.cloud.google.com/?hl=en_US&fromcloudshell=true&show=terminal&authuser=1).
   2. Run this command:
 ```bash
-git clone https://github.com/jahidrdpschool/shell.git
+git clone https://github.com/jahidrdpschool/pc.git
 ```
 
   ## Step 1: Launch the first novnc2
@@ -34,11 +34,11 @@ git clone https://github.com/jahidrdpschool/shell.git
   1. novnc2: Open a new terminal in Google Cloud Shell.
   2. novnc2: Run this script:
       ```bash
-      chmod +x shell/multiple-pc.sh
+      chmod +x pc/multiple-pc.sh
       ```
       +
       ```bash
-      ./shell/multiple-pc.sh
+      ./pc/multiple-pc.sh
       ```
   3. novnc2: Follow the prompts to enter the number of 2 PC you want to launch.
   4. novnc2: Cloud Shell Click on: "Access Link 1: [https://localhost:8001](https://shell.cloud.google.com/devshell/proxy?port=8001&environment_id=default&authuser=1)"
