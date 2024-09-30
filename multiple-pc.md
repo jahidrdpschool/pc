@@ -3,7 +3,7 @@
 ## Github Repo Download (1st Time Only):
 
 ```bash
-git clone https://github.com/jahidrdpschool/pc-cloud-shell.git
+git clone https://github.com/jahidrdpschool/pc.git
 ```
 
 
@@ -23,6 +23,6 @@ echo ""
 ```
 
 ```bash
-chmod +x pc-cloud-shell/multiple-pc.sh
-./pc-cloud-shell/multiple-pc.sh
+chmod +x pc/multiple-pc.sh
+./pc/multiple-pc.sh
 ```

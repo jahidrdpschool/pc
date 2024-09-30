@@ -4,7 +4,7 @@
   1. Open Google Cloud [Shell](https://shell.cloud.google.com/?hl=en_US&fromcloudshell=true&show=terminal&authuser=1).
   2. Run this command:
 ```bash
-git clone https://github.com/jahidrdpschool/pc-cloud-shell.git
+git clone https://github.com/jahidrdpschool/pc.git
 ```
 
   ## Step 1: Launch the first Ubuntu Desktop instance
@@ -45,8 +45,8 @@ git clone https://github.com/jahidrdpschool/pc-cloud-shell.git
   1. Open a new terminal in Google Cloud Shell.
   2. Run this script:
       ```bash
-      chmod +x pc-cloud-shell/multiple-pc.sh
-      ./pc-cloud-shell/multiple-pc.sh
+      chmod +x pc/multiple-pc.sh
+      ./pc/multiple-pc.sh
       ```
   3. Follow the prompts to enter the number of PCs you want to launch.
 
