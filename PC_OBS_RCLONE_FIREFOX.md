@@ -104,7 +104,7 @@ cp ~/rclone.conf ~/.config/rclone/rclone.conf
 ```bash
 rclone sync url: ~/Desktop/Url2Up
 ```
-## Step 7: Install rclone
+## Step 7: Update Firefox
   1. Package Update
 ```
 sudo apt update
