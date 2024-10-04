@@ -11,7 +11,7 @@ git clone https://github.com/jahidrdpschool/pc.git
 ## Download System File (1st Time Only):
 
 ```bash
-wget https://file.jahid.eu.org/1:/MyDrive/noVNC/Google%20Shell/System%20Files/stream.tar
+wget https://file.jahid.eu.org/1:/MyDrive/noVNC/Google%20Shell/System%20Files/stream-obs.tar
 ```
 
 ## PC Kill (Not Necessary):
