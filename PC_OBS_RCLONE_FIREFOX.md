@@ -90,7 +90,7 @@ sudo apt-get install -y rclone
 ```
   2. Rclone Configuration File Download
 ```bash
-wget https://YourFileWebsite/rclone.conf
+wget https://Your-File-Website/rclone.conf
 ```
   3. Create Rclone Folder
 ```bash
