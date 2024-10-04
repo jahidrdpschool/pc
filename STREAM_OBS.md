@@ -26,7 +26,7 @@ clear
 # PC Making:
 
 ```bash
-docker load -i stream-obs
+docker load -i stream-obs.tar
 chmod +x pc/pc-obs.sh
 ./pc/pc-obs.sh
 ```
