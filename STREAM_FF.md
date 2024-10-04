@@ -11,7 +11,7 @@ git clone https://github.com/jahidrdpschool/pc.git
 ## Download System File (1st Time Only):
 
 ```bash
-wget https://file.jahid.eu.org/1:/MyDrive/noVNC/Google%20Shell/System%20Files/stream_ff.tar
+wget https://file.jahid.eu.org/1:/MyDrive/noVNC/Google%20Shell/System%20Files/stream-ff.tar
 ```
 
 ## PC Kill (Not Necessary):
@@ -26,7 +26,7 @@ clear
 # PC Making:
 
 ```bash
-docker load -i stream_ff.tar
+docker load -i stream-ff.tar
 chmod +x pc/pc-ff.sh
 ./pc/pc-ff.sh
 ```
