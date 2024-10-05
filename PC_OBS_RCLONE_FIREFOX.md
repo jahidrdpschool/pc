@@ -102,7 +102,7 @@ cp ~/rclone.conf ~/.config/rclone/rclone.conf
 ```
   5. Drive Folder Sync
 ```bash
-rclone sync url: ~/Desktop/Url2Up
+rclone sync your-remote-name: ~/Desktop/Url2Up
 ```
 ## Step 7: Update Firefox
   1. Package Update
