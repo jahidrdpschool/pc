@@ -6,4 +6,6 @@ wget https://github.com/jahidrdpschool/pc/raw/refs/heads/main/system-bash-files/
 wget https://github.com/jahidrdpschool/pc/raw/refs/heads/main/system-bash-files/Goto.sh
 wget https://github.com/jahidrdpschool/pc/raw/refs/heads/main/system-bash-files/cmd.txt
 
-chmod +x Shell.sh Drive.sh Stream.sh Goto.sh
+sed -i 's/\r//g' *.sh
+
+chmod +x *.sh
