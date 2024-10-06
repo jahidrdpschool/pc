@@ -1,1 +1,1 @@
-rclone sync url: ~/Desktop/
+rclone sync your-remote-name: ~/Desktop/
