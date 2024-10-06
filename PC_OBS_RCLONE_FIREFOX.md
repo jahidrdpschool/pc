@@ -34,7 +34,7 @@ git clone https://github.com/jahidrdpschool/pc.git
   1. novnc2: Open a new terminal in Google Cloud Shell.
   2. novnc2: Run this script:
       ```bash
-      chmod +x *.sh
+      chmod +x pc/pc.sh
       ./pc/pc.sh
       ```
   3. novnc2: Follow the prompts to enter the number of 2 PC you want to launch.
