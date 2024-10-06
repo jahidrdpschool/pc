@@ -27,6 +27,6 @@ clear
 
 ```bash
 docker load -i stream-ff.tar
-chmod +x *.sh
+chmod +x pc/pc-ff.sh
 ./pc/pc-ff.sh
 ```
