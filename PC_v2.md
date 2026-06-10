@@ -11,7 +11,7 @@ git clone https://github.com/jahidrdpschool/pc.git
   ## Step 1: Launch the first novnc2
 
   1. Run this command:
-      ```bash
+```bash
       echo "Killing all running containers..."
 docker kill $(docker ps -q) > /dev/null 2>&1
 
@@ -37,7 +37,7 @@ echo "🚀 System fully cleaned and Webtop is now running!"
 echo "🔗 Access Link: http://localhost:8080"
 echo "---------------------------------------------------"
 echo ""
-      ```
+```
   2. Wait for the container to start.
   3. Cloud Shell Click on "Access Link: [https://localhost:8080](https://shell.cloud.google.com/devshell/proxy?port=8080&environment_id=default&authuser=1)"
   4. Close the Cloud Shell tab, but keep the novnc2 tab open.
