@@ -12,7 +12,7 @@ git clone https://github.com/jahidrdpschool/pc.git
 
   1. Run this command:
 ```bash
-      echo "Killing all running containers..."
+echo "Killing all running containers..."
 docker kill $(docker ps -q) > /dev/null 2>&1
 
 echo "Removing all containers..."
