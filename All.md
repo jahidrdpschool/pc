@@ -1,10 +1,20 @@
 ## Run the Container 1
 
 ```bash
-docker run --rm -p 8080:3000 -e DISPLAY=:0.0 -e -d linuxserver/webtop:ubuntu-xfce
+docker rm -f webtop-single > /dev/null 2>&1
+
+docker run -d \
+  --name webtop-single \
+  --rm \
+  -p 8080:3000 \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Asia/Dhaka \
+  linuxserver/webtop:ubuntu-xfce > /dev/null 2>&1
+
 clear
 echo ""
-echo "Access Link: https://localhost:8080"
+echo "Access Link: http://localhost:8080"
 echo ""
 ```
 
