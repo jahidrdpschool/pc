@@ -1,10 +1,11 @@
 ## Run the Container 1
 
 ```bash
-docker rm -f webtop-single > /dev/null 2>&1
+if [ $(docker ps -aq | wc -l) -gt 0 ]; then
+  docker rm -f $(docker ps -aq) > /dev/null 2>&1
+fi
 
 docker run -d \
-  --name webtop-single \
   --rm \
   -p 8080:3000 \
   -e PUID=1000 \
@@ -26,10 +27,19 @@ echo ""
 ## Run the Container 2
 
 ```bash
-docker run --rm -p 8080:80 -e DISPLAY=:0.0 -e -d dorowu/ubuntu-desktop-lxde-vnc
+if [ $(docker ps -aq | wc -l) -gt 0 ]; then
+  docker rm -f $(docker ps -aq) > /dev/null 2>&1
+fi
+
+docker run -d \
+  --rm \
+  -p 8080:80 \
+  -e DISPLAY=:0.0 \
+  dorowu/ubuntu-desktop-lxde-vnc > /dev/null 2>&1
+
 clear
 echo ""
-echo "Access Link: https://localhost:8080"
+echo "Access Link: http://localhost:8080"
 echo ""
 ```
 
@@ -40,12 +50,27 @@ echo ""
 ## Run the Container 3
 
 ```bash
-docker run --rm -p 8080:8080 -e DISPLAY=:0.0 -e vncpassword=12345678 -d u1ih/ubuntu-novnc
+if [ $(docker ps -aq | wc -l) -gt 0 ]; then
+  docker rm -f $(docker ps -aq) > /dev/null 2>&1
+fi
+
+docker run -d \
+  --rm \
+  -p 8080:8080 \
+  -e DISPLAY=:0.0 \
+  -e vncpassword=12345678 \
+  u1ih/ubuntu-novnc > /dev/null 2>&1
+
 clear
 read -p "Enter your Authuser ID: " authuser
+
 access_link="https://shell.cloud.google.com/devshell/proxy?authuser=${authuser}&password=12345678&port=8080&environment_id=default"
+
 echo ""
-echo "Access Link: ${access_link}"
+echo "---------------------------------------------------"
+echo "🚀 Ubuntu noVNC is now running!"
+echo "🔗 Access Link: ${access_link}"
+echo "---------------------------------------------------"
 echo ""
 ```
 
@@ -56,10 +81,29 @@ echo ""
 ## Run the Container 4
 
 ```bash
-docker run --rm -p 8080:8080 -e DISPLAY=:0.0 -d solarkennedy/wine-x11-novnc-docker /bin/bash -c "apt-get update && apt-get install -y firefox && firefox & /usr/bin/supervisord"
+if [ $(docker ps -aq | wc -l) -gt 0 ]; then
+  docker rm -f $(docker ps -aq) > /dev/null 2>&1
+fi
+
+docker run -d \
+  --rm \
+  -p 8080:8080 \
+  -e DISPLAY=:0.0 \
+  solarkennedy/wine-x11-novnc-docker \
+  /bin/bash -c "apt-get update && apt-get install -y firefox && firefox & /usr/bin/supervisord" > /dev/null 2>&1
+
 clear
+echo "⏳ Please wait... Firefox is being installed inside the container."
+read -p "Enter your Authuser ID: " authuser
+
+access_link="https://shell.cloud.google.com/devshell/proxy?authuser=${authuser}&port=8080&environment_id=default"
+
 echo ""
-echo "Access Link: https://localhost:8080"
+echo "---------------------------------------------------"
+echo "🚀 Wine-X11 with Firefox is starting!"
+echo "🔗 Access Link: ${access_link}"
+echo "---------------------------------------------------"
+echo "Note: Firefox install hote 1-2 minute lagte pare."
 echo ""
 ```
 
