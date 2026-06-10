@@ -21,19 +21,19 @@ docker rm $(docker ps -a -q) > /dev/null 2>&1
 echo "Cleaning all Docker images..."
 docker rmi -f $(docker images -q) > /dev/null 2>&1
 
-echo "Starting fresh Webtop instance..."
+echo "Starting fresh Ubuntu XFCE Webtop instance..."
 docker run -d \
   --rm \
   -p 8080:3000 \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Asia/Dhaka \
-  linuxserver/webtop > /dev/null 2>&1
+  linuxserver/webtop:ubuntu-xfce > /dev/null 2>&1
 
 clear
 echo ""
 echo "---------------------------------------------------"
-echo "🚀 System fully cleaned and Webtop is now running!"
+echo "🚀 System fully cleaned and Ubuntu XFCE is now running!"
 echo "🔗 Access Link: http://localhost:8080"
 echo "---------------------------------------------------"
 echo ""
