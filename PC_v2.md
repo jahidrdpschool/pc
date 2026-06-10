@@ -12,16 +12,11 @@ git clone https://github.com/jahidrdpschool/pc.git
 
   1. Run this command:
 ```bash
-echo "Killing all running containers..."
+echo "Cleaning up old containers..."
 docker kill $(docker ps -q) > /dev/null 2>&1
-
-echo "Removing all containers..."
 docker rm $(docker ps -a -q) > /dev/null 2>&1
 
-echo "Cleaning all Docker images..."
-docker rmi -f $(docker images -q) > /dev/null 2>&1
-
-echo "Starting fresh Ubuntu XFCE Webtop instance..."
+echo "Starting Ubuntu XFCE Webtop instance..."
 docker run -d \
   --rm \
   -p 8080:3000 \
@@ -33,7 +28,7 @@ docker run -d \
 clear
 echo ""
 echo "---------------------------------------------------"
-echo "🚀 System fully cleaned and Ubuntu XFCE is now running!"
+echo "🚀 Ubuntu XFCE is now running instantly!"
 echo "🔗 Access Link: http://localhost:8080"
 echo "---------------------------------------------------"
 echo ""
