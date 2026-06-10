@@ -12,15 +12,31 @@ git clone https://github.com/jahidrdpschool/pc.git
 
   1. Run this command:
       ```bash
-      docker kill $(docker ps -q)
-      docker rm $(docker ps -a -q)
-      docker rmi $(docker images -q)
-      clear
-      docker run -p 8080:3000 -e DISPLAY=:0.0 -d linuxserver/webtop
-      clear
-      echo ""
-      echo "Access Link: https://localhost:8080"
-      echo ""
+      echo "Killing all running containers..."
+docker kill $(docker ps -q) > /dev/null 2>&1
+
+echo "Removing all containers..."
+docker rm $(docker ps -a -q) > /dev/null 2>&1
+
+echo "Cleaning all Docker images..."
+docker rmi -f $(docker images -q) > /dev/null 2>&1
+
+echo "Starting fresh Webtop instance..."
+docker run -d \
+  --rm \
+  -p 8080:3000 \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Asia/Dhaka \
+  linuxserver/webtop > /dev/null 2>&1
+
+clear
+echo ""
+echo "---------------------------------------------------"
+echo "🚀 System fully cleaned and Webtop is now running!"
+echo "🔗 Access Link: http://localhost:8080"
+echo "---------------------------------------------------"
+echo ""
       ```
   2. Wait for the container to start.
   3. Cloud Shell Click on "Access Link: [https://localhost:8080](https://shell.cloud.google.com/devshell/proxy?port=8080&environment_id=default&authuser=1)"
