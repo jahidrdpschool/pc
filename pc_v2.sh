@@ -1,17 +1,11 @@
-#!/bin/bash
-
-# 1. Cleanup old containers to avoid port conflicts
 echo "Cleaning up old containers..."
 docker rm -f $(docker ps -aq --filter ancestor=linuxserver/webtop:ubuntu-xfce) > /dev/null 2>&1
 clear
 
-# Function to run the container
 download_and_run() {
   local port=$1
   local index=$2
 
-  # Run the XFCE Webtop container
-  # PUID and PGID 1000 ensures permission issues don't happen
   docker run -d \
     --rm \
     -p $port:3000 \
@@ -24,7 +18,6 @@ download_and_run() {
   echo "✅ PC $index is ready! Access Link: http://localhost:$port"
 }
 
-# User input for number of PCs
 read -p "Enter the number of PC you want to start: " PC
 
 echo ""
