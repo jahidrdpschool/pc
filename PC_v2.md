@@ -23,9 +23,8 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Asia/Dhaka \
-  linuxserver/webtop:ubuntu-xfce > /dev/null 2>&1
+  linuxserver/webtop:ubuntu-xfce
 
-clear
 echo ""
 echo "---------------------------------------------------"
 echo "🚀 Ubuntu XFCE is now running instantly!"
