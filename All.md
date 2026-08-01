@@ -11,9 +11,8 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Asia/Dhaka \
-  linuxserver/webtop:ubuntu-xfce > /dev/null 2>&1
+  linuxserver/webtop:ubuntu-xfce
 
-clear
 echo ""
 echo "Access Link: http://localhost:8080"
 echo ""
@@ -35,9 +34,8 @@ docker run -d \
   --rm \
   -p 8080:80 \
   -e DISPLAY=:0.0 \
-  dorowu/ubuntu-desktop-lxde-vnc > /dev/null 2>&1
+  dorowu/ubuntu-desktop-lxde-vnc
 
-clear
 echo ""
 echo "Access Link: http://localhost:8080"
 echo ""
@@ -59,9 +57,8 @@ docker run -d \
   -p 8080:8080 \
   -e DISPLAY=:0.0 \
   -e vncpassword=12345678 \
-  u1ih/ubuntu-novnc > /dev/null 2>&1
+  u1ih/ubuntu-novnc
 
-clear
 read -p "Enter your Authuser ID: " authuser
 
 access_link="https://shell.cloud.google.com/devshell/proxy?authuser=${authuser}&password=12345678&port=8080&environment_id=default"
@@ -90,9 +87,8 @@ docker run -d \
   -p 8080:8080 \
   -e DISPLAY=:0.0 \
   solarkennedy/wine-x11-novnc-docker \
-  /bin/bash -c "apt-get update && apt-get install -y firefox && firefox & /usr/bin/supervisord" > /dev/null 2>&1
+  /bin/bash -c "apt-get update && apt-get install -y firefox && firefox & /usr/bin/supervisord"
 
-clear
 echo "⏳ Please wait... Firefox is being installed inside the container."
 read -p "Enter your Authuser ID: " authuser
 
