@@ -1,6 +1,5 @@
 echo "Cleaning up old containers..."
 docker rm -f $(docker ps -aq --filter ancestor=linuxserver/webtop:ubuntu-xfce) > /dev/null 2>&1
-clear
 
 download_and_run() {
   local port=$1
@@ -13,7 +12,7 @@ download_and_run() {
     -e PGID=1000 \
     -e TZ=Asia/Dhaka \
     --name "webtop-pc-$index" \
-    linuxserver/webtop:ubuntu-xfce > /dev/null 2>&1
+    linuxserver/webtop:ubuntu-xfce
 
   echo "✅ PC $index is ready! Access Link: http://localhost:$port"
 }
@@ -25,7 +24,6 @@ echo "🚀 Starting $PC Ubuntu XFCE Desktops..."
 echo "---------------------------------------------------"
 
 for ((i = 1; i <= PC; i++)); do
-  # Port start hobe 8001 theke (8001, 8002, 8003...)
   port=$((8000 + i))
   download_and_run $port $i
 done
