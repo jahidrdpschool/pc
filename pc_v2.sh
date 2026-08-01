@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Cleaning up old containers..."
 docker rm -f $(docker ps -aq --filter ancestor=linuxserver/webtop:ubuntu-xfce) > /dev/null 2>&1
 
@@ -17,7 +19,7 @@ download_and_run() {
   echo "✅ PC $index is ready! Access Link: http://localhost:$port"
 }
 
-read -p "Enter the number of PC you want to start: " PC
+read -p "Enter the number of PC you want to start: " PC < /dev/tty
 
 echo ""
 echo "🚀 Starting $PC Ubuntu XFCE Desktops..."
