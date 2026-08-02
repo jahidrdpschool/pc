@@ -16,19 +16,26 @@ echo "Cleaning up old containers..."
 docker kill $(docker ps -q) > /dev/null 2>&1
 docker rm $(docker ps -a -q) > /dev/null 2>&1
 
-echo "Starting Ubuntu XFCE Webtop instance..."
+echo "Creating workspace folder..."
+mkdir -p $HOME/my-workspace
+
+echo "Starting Ubuntu XFCE Webtop instance mapped directly to Desktop..."
 docker run -d \
+  --name ubuntu-webtop \
   --rm \
   -p 8080:3000 \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Asia/Dhaka \
+  -v "$HOME/my-workspace:/config/Desktop" \
+  -w /config/Desktop \
   linuxserver/webtop:ubuntu-xfce
 
 echo ""
 echo "---------------------------------------------------"
 echo "🚀 Ubuntu XFCE is now running instantly!"
 echo "🔗 Access Link: http://localhost:8080"
+echo "📂 Linked Folder: $HOME/my-workspace <-> /config/Desktop"
 echo "---------------------------------------------------"
 echo ""
 ```
