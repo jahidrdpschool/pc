@@ -5,16 +5,22 @@ if [ $(docker ps -aq | wc -l) -gt 0 ]; then
   docker rm -f $(docker ps -aq) > /dev/null 2>&1
 fi
 
+mkdir -p $HOME/my-workspace
+
 docker run -d \
+  --name ubuntu-webtop \
   --rm \
   -p 8080:3000 \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Asia/Dhaka \
+  -v "$HOME/my-workspace:/config/Desktop" \
+  -w /config/Desktop \
   linuxserver/webtop:ubuntu-xfce
 
 echo ""
 echo "Access Link: http://localhost:8080"
+echo "Linked Folder: $HOME/my-workspace <-> /config/Desktop"
 echo ""
 ```
 
@@ -30,14 +36,20 @@ if [ $(docker ps -aq | wc -l) -gt 0 ]; then
   docker rm -f $(docker ps -aq) > /dev/null 2>&1
 fi
 
+mkdir -p $HOME/my-workspace
+
 docker run -d \
+  --name ubuntu-lxde-vnc \
   --rm \
   -p 8080:80 \
   -e DISPLAY=:0.0 \
+  -v "$HOME/my-workspace:/root/Desktop" \
+  -w /root/Desktop \
   dorowu/ubuntu-desktop-lxde-vnc
 
 echo ""
 echo "Access Link: http://localhost:8080"
+echo "Linked Folder: $HOME/my-workspace <-> /root/Desktop"
 echo ""
 ```
 
@@ -52,11 +64,16 @@ if [ $(docker ps -aq | wc -l) -gt 0 ]; then
   docker rm -f $(docker ps -aq) > /dev/null 2>&1
 fi
 
+mkdir -p $HOME/my-workspace
+
 docker run -d \
+  --name ubuntu-novnc \
   --rm \
   -p 8080:8080 \
   -e DISPLAY=:0.0 \
   -e vncpassword=12345678 \
+  -v "$HOME/my-workspace:/root/Desktop" \
+  -w /root/Desktop \
   u1ih/ubuntu-novnc
 
 read -p "Enter your Authuser ID: " authuser
@@ -67,6 +84,7 @@ echo ""
 echo "---------------------------------------------------"
 echo "🚀 Ubuntu noVNC is now running!"
 echo "🔗 Access Link: ${access_link}"
+echo "📂 Linked Folder: $HOME/my-workspace <-> /root/Desktop"
 echo "---------------------------------------------------"
 echo ""
 ```
@@ -82,10 +100,15 @@ if [ $(docker ps -aq | wc -l) -gt 0 ]; then
   docker rm -f $(docker ps -aq) > /dev/null 2>&1
 fi
 
+mkdir -p $HOME/my-workspace
+
 docker run -d \
+  --name wine-x11-novnc \
   --rm \
   -p 8080:8080 \
   -e DISPLAY=:0.0 \
+  -v "$HOME/my-workspace:/root/Desktop" \
+  -w /root/Desktop \
   solarkennedy/wine-x11-novnc-docker \
   /bin/bash -c "apt-get update && apt-get install -y firefox && firefox & /usr/bin/supervisord"
 
@@ -98,6 +121,7 @@ echo ""
 echo "---------------------------------------------------"
 echo "🚀 Wine-X11 with Firefox is starting!"
 echo "🔗 Access Link: ${access_link}"
+echo "📂 Linked Folder: $HOME/my-workspace <-> /root/Desktop"
 echo "---------------------------------------------------"
 echo "Note: Firefox install hote 1-2 minute lagte pare."
 echo ""
