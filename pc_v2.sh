@@ -23,7 +23,6 @@ download_and_run() {
 
   echo "✅ PC $index is ready!"
   echo "   🔗 Local Link: http://localhost:$port"
-  echo "   🌐 Cloud Shell Link: https://shell.cloud.google.com/devshell/proxy?port=$port&environment_id=default&authuser=1"
   echo "   📂 Workspace: $workspace <-> Desktop"
   echo "---------------------------------------------------"
 }
